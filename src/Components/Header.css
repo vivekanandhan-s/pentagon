@@ -1,0 +1,190 @@
+.NavBar{
+    position: sticky;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    height: 55px;
+    font-size: 30px;
+    top:0px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    z-index: 1;
+    color: white;
+    background: transparent;
+}
+
+.past{
+  background: white;
+  color: black;
+}
+.NavIcon{
+    display: none;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 50px;
+    list-style: none;
+    position: absolute;
+    right:0%;
+    top: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 8px;
+}
+.navLinks{
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.yes{
+    font-weight: 900;
+}
+.navLinks:hover{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+.navLinks:hover ~ .category{
+    display: block;
+}
+.category{
+    list-style: none;
+   
+    margin-top: 12px;
+    display: none;
+    /* margin-right: 14px; */
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+.category:hover{
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .wrapper {
+    height: 29px;
+    width: 242px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 6%;
+
+  }
+  
+  .typing-demo {
+    width: 18ch;
+    animation: typing 2s steps(22),blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-family: monospace;
+    font-size: 20px;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    0% {
+      border-color: transparent
+    }
+  }
+  
+@media screen and (max-width:799px) {
+    .NavBar{
+        position: sticky;
+        top: 0px;
+        margin-left: 3px !important;
+        margin-right: 0px !important;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top:80px;
+        left: -150%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active{
+        background-color: #f8f9fa;
+        left: 0;
+        top: 65px;
+        text-align: center;
+        opacity: 1;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        z-index: 1;
+        grid-gap: 0px;
+    }
+    .navLinks{
+        text-align: center;
+        padding: 1px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        width: 100%;
+        display: table;
+        color: black !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .navLinks:hover{
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+    }
+    .NavIcon{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transform: translate(-35%, 31%);
+        font-size: 21px;
+        cursor: pointer;
+        border: solid 3px black;
+        border-radius: 7px;
+        padding: 8px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+    }  
+}
